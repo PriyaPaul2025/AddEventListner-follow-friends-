@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+min-height: 100vh;
+width: 100%;
+font-family: Arial, Helvetica, sans-serif;
+overflow: hidden;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+h3{
+    margin-top: 8px;
+}
+.header_wrapper header{
+    width: 100%;
+    background: url(https://plus.unsplash.com/premium_photo-1672115680958-54438df0ab82?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bW91bnRhaW5zfGVufDB8fDB8fHww) no-repeat 50% 20% / cover;
+    min-height: calc(150px + 15vh);
+}
+.header_wrapper .cols_container .left_col{
+    padding: 25px 20px;
+    max-width: 350px;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+}
+.header_wrapper .cols_container .left_col .img_container{
+position: absolute;
+top: -10%;
+left: 50%;
+transform: translateX(-50%);
+}
+.header_wrapper .cols_container .left_col .img_container img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    box-shadow: 1px 3px 12px rgba(0, 0, 0, 0.18);
+}
+.header_wrapper .cols_container .left_col .img_container span{
+    position: absolute;
+    background: #2afa6a;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    bottom: 3px;
+    right: 11px;
+    border: 2px solid #fff;
+}
+.header_wrapper .cols_container .left_col h2{
+    margin-top: 40px;
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+.header_wrapper .cols_container .left_col p{
+    font-size: 0.9rem;
+    color: #818181;
+    margin: 0;
+}
+.header_wrapper .cols_container .left_col ul{
+    justify-content: space-between;
+    position:relative ;
+    margin: 35px 0;
+}
+.header_wrapper .cols_container .left_col ul li{
+    display: flex;
+    flex-direction: column;
+    color: #818181;
+    font-size: 0.9rem;
+}
+.header_wrapper .cols_container .left_col ul li span{
+    color: #1d1d1d;
+    font-weight: 600;
+}
+.header_wrapper .cols_container .left_col ul::after{
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    display: block;
+    background: #ccc;
+    height: 1px;
+    width: 100%;
+}
+.header_wrapper .cols_container .content p{
+    font-size: 1rem;
+    color: #1d1d1d;
+    line-height: 1.2rem;
+}
+.header_wrapper .cols_container .content ul{
+    gap: 30px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 25px;
+}
+.header_wrapper .cols_container .right_col nav{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 30px 0;
+    justify-content: space-between;
+flex-direction: column;
+}
+ .header_wrapper .cols_container .right_col nav ul{
+display: flex;
+gap: 20px;
+}
+.header_wrapper .cols_container .right_col nav ul li a{ 
+    text-transform: uppercase;
+    color: #818181;
+}
+ .header_wrapper .cols_container .right_col nav button{ 
+    background-color: #0091ff;
+    color: #fff;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 10%;
+    display: flex;
+    text-align: center;
+justify-content: center;
+}
+.header_wrapper .cols_container .right_col nav ul li:nth-child(1) a{
+    color: #1d1d1d;
+    font-weight: 600;
+}
+.header_wrapper .cols_container .right_col nav button:hover{
+    opacity: 0.8;
+}
+.header_wrapper .cols_container .right_col .photos{
+    display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(190px, 1fr));
+        gap: 20px;
+}
+.header_wrapper .cols_container .right_col .photos img{
+width: 100%;    
+display: block;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+@media(min-width:868px){
+    .header_wrapper .cols_container{
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 90%;
+        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 50px;
+    } 
+    .header_wrapper .cols_container .left_col{
+        padding: 25px 0;
+    }  
+    .header_wrapper .cols_container .right_col ul{
+    flex-direction:row;
+        gap: 50px;
+    }
+    .header_wrapper .cols_container .right_col .photos{
+        height: 365px;
+overflow: hidden;
+padding: 0, 0, 30px;
+    }
+}
